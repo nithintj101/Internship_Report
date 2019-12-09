@@ -1,0 +1,139 @@
+\documentclass[12pt]{extarticle}
+
+%%%%%%%% CREATE DOCUMENT STRUCTURE %%%%%%%%
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{subfig}
+
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
+
+%% Useful packages
+\usepackage{amsmath}
+\usepackage{appendix}
+\usepackage{apacite}
+\usepackage[square,sort,comma,numbers]{natbib}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{caption}
+\usepackage{gensymb}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage[nottoc]{tocbibind}
+\usepackage{apacite}
+\usepackage{float}
+\usepackage{titling} 
+\usepackage{blindtext}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{xcolor}
+\definecolor{darkgreen}{rgb}{0.0, 0.4, 0.0}
+
+%%%%%%%% DOCUMENT %%%%%%%%
+\begin{document}
+
+%%%% Title Page
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 							% horizontal line and its thickness
+\center 
+ 
+% University
+\textsc{\LARGE Delft University of Technology}\\[1cm]
+
+% Document info
+\textsc{\Large Internship Report}\\[0.2cm]
+\textsc{\large SET3822}\\[1cm] 										% Course Code
+\HRule \\[0.8cm]
+{ \huge \bfseries Direct Air Capture System}\\[0.7cm]								% Assignment
+\HRule \\[2cm]
+\large
+\emph{Author:}\\
+Nithin Thomas Jacob (4841344)\\[1.0cm]
+
+\emph{Supervisors:}\\
+\begin{table}[H]
+\centering
+\scalebox{1.2}{\begin{tabular}{cl}
+Company Supervisor   & Ir. Jan van Kranendonk \\
+TU Delft Supervisor & Prof. dr. ir. Wiebren de Jong \\
+\end{tabular}}
+\end{table}
+
+% Author info
+\emph{Project duration:}\\
+September $2^{nd}$, 2019 - December $21^{st}$, 2019
+\\[4cm]
+\begin{figure}[H]
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{images/TU_delft_logo.jpg}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[scale=0.15]{images/zef.png}
+\end{minipage}
+\end{figure}
+\end{titlepage}
+
+\tableofcontents
+
+\newpage
+\listoffigures
+
+\listoftables
+
+
+\newpage
+\input{sections/preface.tex}
+
+\newpage
+\input{sections/introduction.tex}
+
+\newpage
+\input{sections/previouswork.tex}
+
+
+\newpage
+\input{sections/newwork.tex}
+
+\newpage
+\input{sections/result.tex}
+
+\newpage
+\input{sections/discussion.tex}
+
+\newpage
+\input{sections/recommendation.tex}
+
+
+\newpage
+\input{sections/conclusion.tex}
+
+\newpage
+\bibliography{ref.bib}
+\bibliographystyle{ieeetr}
+
+
+\newpage 
+\input{sections/appendix.tex}
+
+
+
+%%%%%%%% EXTRA TIPS %%%%%%%%
+%% hou deze structuur aan voor afbeeldingen
+%%\begin{figure}[H]
+%%\includegraphics[]{Pendulum.jpg}
+%%\caption{Sketch of the pendulum}
+%%\label{fig:pendulum}
+%%\end{figure}
+
+
+%%\newpage
+
+
+
+\end{document}
