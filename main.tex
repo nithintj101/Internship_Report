@@ -12,6 +12,9 @@
 
 %% Useful packages
 \usepackage{amsmath}
+\usepackage[english]{babel}
+\usepackage{blindtext}
+\usepackage{draftwatermark}
 \usepackage{appendix}
 \usepackage{apacite}
 \usepackage[square,sort,comma,numbers]{natbib}
@@ -30,7 +33,9 @@
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{xcolor}
 \definecolor{darkgreen}{rgb}{0.0, 0.4, 0.0}
-
+\SetWatermarkText{CONFIDENTIAL}
+\SetWatermarkScale{2}
+\SetWatermarkColor[gray]{0.8}
 %%%%%%%% DOCUMENT %%%%%%%%
 \begin{document}
 
@@ -65,7 +70,9 @@ TU Delft Supervisor & Prof. dr. ir. Wiebren de Jong \\
 % Author info
 \emph{Project duration:}\\
 September $2^{nd}$, 2019 - December $21^{st}$, 2019
-\\[4cm]
+\\[2cm]
+\centering
+\textit{This report is confidential and may not be used, published or redistributed without the prior written consent of Zero Emission Fuels B.V}
 \begin{figure}[H]
 \centering
 \begin{minipage}{.5\textwidth}
@@ -86,6 +93,9 @@ September $2^{nd}$, 2019 - December $21^{st}$, 2019
 
 \listoftables
 
+\newpage
+\input{sections/nom.tex}
+
 
 \newpage
 \input{sections/preface.tex}
@@ -102,9 +112,6 @@ September $2^{nd}$, 2019 - December $21^{st}$, 2019
 
 \newpage
 \input{sections/result.tex}
-
-\newpage
-\input{sections/discussion.tex}
 
 \newpage
 \input{sections/recommendation.tex}
