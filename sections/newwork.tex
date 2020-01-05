@@ -5,7 +5,7 @@ In this section, my work on the DAC system and ZEF shall be elaborated more. The
 
 \subsection{The DAC sub-stages}
 
-The DAC system in ZEF 5 which we had worked on and made contains 2 sub - systems namely absorption unit and desorbtion unit. The sub - systems are elaborated below. 
+The DAC system in ZEF V which we had worked on and made contains 2 sub - systems namely absorption unit and desorbtion unit. The sub - systems are elaborated below. 
 
 \subsubsection{Stage 1 - Absorption}
 PEI is exposed to air by exposing it to the atmosphere and using a high power suction fan creating a cross current flow between the flow of air and the flow of PEI. $CO_2$ is absorbed into the PEI using chemisorption. The PEI containing $CO_2$ is collected in the collector and then passed to the desportion chamber. 
@@ -14,14 +14,14 @@ PEI is exposed to air by exposing it to the atmosphere and using a high power su
 
 The PEI containing absorbed $CO_2$ is passed into a vacuum chamber that maintains the pressure at near vacuum conditions using a 4 - stage compressor. The vacuum chamber is also heated to elevated temperature using heating catridges. The temperature is controlled using a PID controller that turns the heater on or off till it reaches a desired set temperature which is at about 100 \degree C. The temperature isn't supplied more that 120 \degree C as it is found from literature by the ZEF I team that PEI starts to degrade rapidly at that temperature. 
 \bigbreak \noindent
-It is also found from literature study by ZEF II team that oxygen degrades PEI at elevated temperatures quite rapidly and this is leads to undesirable effect. Hence, we use a vacuum conditions to faciliate the desportion process. The desorbed gases containing $CO_2$, $H_2O$ and other gases is passed out of the compressor at 50 bar.
+It is also found from literature study by ZEF II team that oxygen degrades PEI at elevated temperatures quite rapidly and this leads to undesirable effect. Hence, we use a vacuum conditions to faciliate the desportion process. The desorbed gases containing $CO_2$, $H_2O$ and other gases is passed out of the compressor at 50 bar.
 \bigbreak \noindent
 After the gases have been desorbed from the heated PEI. It PEI is passed down into a PEI pump that supplies PEI back into the absorber subsystem. The absorber subsystem takes the PEI into the manifold that splits the PEI into 8 different distributors. The distributors are designed in such a way that maximum PEI is exposed to the atmosphere for direct air capture. Thereby, making the whole system a continuous system based on the designs of ZEF IV which is summarized in Section \ref{sec:zef4}.
 
 \subsection{Sprint 1 - $2^{nd}$ September to $23^{rd}$ September}
 \label{sec:sprint1}
 
-Based on the designs and first model fabricated by the ZEF IV team which has been elaborated on in Section \ref{sec:zef4}. During the $1^{st}$ sprint period of my internship in ZEF IV which spanned from $2^{nd}$ September to $23^{rd}$ September I took sometime to learn about 3D printing and about the DAC system and the onboarding process of ZEF. Then, I had fabricated the DAC system V1.1 absorber and column.  
+Based on the designs and first model fabricated by the ZEF IV team which has been elaborated on in Section \ref{sec:zef4}. During the $1^{st}$ sprint period of my internship in ZEF IV which spanned from $2^{nd}$ September to $23^{rd}$ September, I took sometime to learn about 3D printing and about the DAC system and the onboarding process of ZEF. Then, I had fabricated the DAC system V1.1 absorber and column.  
 
 \subsubsection{DAC V1.1 system absorber}
 
@@ -73,7 +73,7 @@ The laser cut parts were then assembled in the ZEF workshop using duct tape as i
 \end{minipage}
 \end{figure}
 
-Based on ZEF IV designs for the distributor and manifold minor design changes were made inorder to make some parts more robust. The parts were manufactured using 3D printing with print material used as Polylactide (PLA). Since, the old DAC collectors had no design changes and weren't broken. We continued to use them with the new system as well, which were 3D printed by the previous team as well. The printer used was a Utimaker 2+ which was made with leaktight settings (high infill \% and very low layer height) in the Ultimaker Cura software for 3D printing. 
+Based on ZEF IV designs for the distributor and manifold minor design changes were made inorder to make some parts more robust. The parts were manufactured using 3D printing with print material used as Polylactide (PLA). Since, the old DAC collectors had no design changes and weren't broken. We continued to use them with the new system as well, which were 3D printed by the previous team as well. The printer used was a Utimaker 2+ which was made with leaktight settings (high infill \%, very low layer height and very low print speed) in the Ultimaker Cura software for 3D printing. 
 
 \begin{figure}[H]
 \centering
@@ -91,12 +91,12 @@ Based on ZEF IV designs for the distributor and manifold minor design changes we
 \end{minipage}
 \end{figure}
 
-In Figures \ref{fig:3Dmanifold} we can see the final 3D printed DAC manifold and in Figure \ref{fig:3Ddistributor} we can see the final 3D printed distributor. It can be seen that in the Figure \ref{fig:pmmaass1} that there is a list of components needed for the DAC absorber column: 
+In Figure \ref{fig:3Dmanifold} we can see the final 3D printed DAC manifold and in Figure \ref{fig:3Ddistributor} we can see the final 3D printed distributor. It can be seen that in the Figure \ref{fig:pmmaass1} that there is a list of components needed for the DAC absorber column: 
 \begin{itemize}
     \item DAC distributors x8 
     \item DAC manifold x1 
     \item DAC collectors x8 
-    \item DAC flow channels x8
+    \item DAC flow channels x16 (one for each side)
     \item DAC collector bucket x1 
     \item Silicon connecting pipes
 \end{itemize}
@@ -113,7 +113,7 @@ Since, we needed a large number of DAC distributors and each 3D print take about
 \subsection{Sprint 2 - $23^{rd}$ September to $14^{th}$ October}
 \label{sec:sprint2}
 
-During the sprint 2 period of my internship spanning from $23^{rd}$ September to $14^{th}$ October. I turned my attention toward the desorbtion part and running the DAC system V1.1 as one whole unit and getting the pumps and compressor to run using an Arduino 2560MEGA.  
+During the sprint 2 period of my internship spanning from $23^{rd}$ September to $14^{th}$ October. I turned my attention toward the desorbtion part and running the DAC system V1.1 as one whole unit and controlling the pumps and compressor using an Arduino 2560MEGA.  
 
 \subsubsection{DAC V1.1 system desorber}
 \label{sec:faultycomp}
@@ -178,7 +178,7 @@ In order to rectify the geometry mistakes we changed the geometry of some of the
     \end{minipage}
     \end{figure}
     
-    \item \textbf{Collector :} In order to address the undesired PEI flowing out of the collector. We changed the outlet into a bent nozzle as seen in Figure \ref{fig:newcoll}. I wanted to give more support for the DAC channel plates and hold it with a grip like the DAC distributor system holds it together. This was done by creating slots which can keep the . By doing so, the DAC channels will be held in place rather than in an haphazard manner like in the last system where we had to drill holes on the PMMA sheets and added nails to keep them in place. 
+    \item \textbf{Collector :} In order to address the undesired PEI flowing out of the collector. We changed the outlet into a bent nozzle as seen in Figure \ref{fig:newcoll}. I wanted to give more support for the DAC channel plates and hold it with a grip like the DAC distributor system holds it together. This was done by creating slots which can keep the DAC channels will be held in place rather than in an haphazard manner like in the last system where we had to drill holes on the PMMA sheets and added nails to keep them in place. 
     
     \begin{figure}[H]
         \centering
@@ -258,7 +258,7 @@ In order to rectify the geometry mistakes we changed the geometry of some of the
 
 \subsubsection{Material and production changes}
 
-We have seen in Section \ref{sec:hotpei} that hot PEI reacts with the 3D printing material PLA. Hence, this caused many DAC components like the distributors, the nozzles of the collector bucket and manifold to break due to chemical degradation. This was later confirmed by Wino Spix when he reacted hot PEI with PLA material in a stand alone environment. In order to overcome this issue, we looked into various other ways of prototyping and thanks to Leanord's recommendation. It was decided to go for SLS printing with the prototype material being nylon. We tested the SLS material first to see its reaction with TEPA since it is known that TEPA is more reactive in nature. Besides some discoloration due to the porus nature of nylon. The material was still intact after hours of exposure to TEPA. Hence, prototyping was done by SLS printing using nylon material.    
+In Section \ref{sec:hotpei} we infer that hot PEI reacts with the 3D printing material PLA. Hence, this caused many DAC components like the distributors, the nozzles of the collector bucket and manifold to break due to chemical degradation. This was later confirmed by Wino Spix when he reacted hot PEI with PLA material in a stand alone environment. In order to overcome this issue, we looked into various other ways of prototyping and thanks to Leanord's recommendation. It was decided to go for SLS printing with the prototype material being nylon. We tested the SLS material first to see its reaction with TEPA since it is known that TEPA is more reactive in nature than PEI. Besides some discoloration due to the porus nature of nylon. The material was still intact after hours of exposure to TEPA. Hence, prototyping was done by SLS printing using nylon material.    
 
 
 \subsubsection{Component changes}
@@ -266,11 +266,11 @@ We have seen in Section \ref{sec:hotpei} that hot PEI reacts with the 3D printin
 It was decided to remove or change some components of the DAC system in order to improve the system's efficiency or make it easier to see the process occurring. Some of the changes that we have done in for the new DAC V2.0 system are as follows : 
 
 \begin{itemize}
-    \item \textbf{LIS fabricated compressor :} In DAC V1.1 system, we had used a compressor system that was manufactured by the previous LISForce team but as we seen in Section \ref{sec:faultycomp} and in Figure \ref{fig:psensor} that the compressor system couldn't meet the desired pressure of 50 bar. Hence, the compressor system was removed and a entirely new vacuum pump is used to maintain vacuum conditions in the new DAC desorber system. 
+    \item \textbf{LIS fabricated compressor :} In DAC V1.1 system, we had used a compressor system that was manufactured by the previous LISForce team but as we seen in Section \ref{sec:dacv1.1obs} and in Figure \ref{fig:psensor} that the compressor system couldn't meet the desired pressure of 50 bar. Hence, the compressor system was removed and a entirely new vacuum pump is used to maintain vacuum conditions in the new DAC desorber system. 
     
     \item \textbf{Si tubing :} The Si tubing in the DAC V1.1 system was removed and decided to implement PTFE tubing for the flow of TEPA/PEI across the various DAC components. It is known that PTFE tubes are more robust and can handle high temperatures as well. Thereby making it an ideal candidate for the system. 
     
-    \item \textbf{Desorber column:} In Section \ref{sec:faultycomp} it is covered that the old desorbtion column can be seen in Figure \ref{fig:leaktest} and Figure \ref{fig:desorber}. This desorber had many issues such as moving due to vibrations of the compressor and PEI pump system which is elaborated in Section \ref{sec:breakdown}. In order to combat this issue and to make the system more isolated and transparent to see the distillation and desorbtion process occuring. A stainless steel distillation column is ordered from AliExpress and will be placed seperately from the whole DAC system. This can be seen in the picture below in Figure \ref{fig:discol}.
+    \item \textbf{Desorber column:} In Section \ref{sec:faultycomp} the old desorbtion column can be seen in Figure \ref{fig:leaktest} and Figure \ref{fig:desorber}. This desorber had many issues such as moving due to vibrations of the compressor and PEI pump system which is elaborated in Section \ref{sec:breakdown}. In order to combat this issue and to make the system more isolated and transparent to see the distillation and desorbtion process occuring. A stainless steel distillation column is ordered from AliExpress and will be placed seperately from the whole DAC system. This can be seen in the picture below in Figure \ref{fig:discol}.
     
     \begin{figure}[H]
         \centering
@@ -298,7 +298,7 @@ In order to combat some of the issues faced in the process stage in DAC V1.1 sys
 \subsection{Sprint 5 - $25^{th}$ November - $16^{th}$ December}
 \label{sec:sprint5}
 
-In the $5^{th}$ phase of the internship. We started the assembly of the DAC V2.0 system and incorporating the above component changes and material changes as well. Then in the later stages of the sprint we ran the system to check on it. The idea for the DAC V2.0 system to become more robust and run for much longer run times than before without stopping or refilling and making it a closed system. The system should also have a continuous $CO_2$ out-stream as well that can be fed to the Fluid Machinery subsystem to pump it out at 50 bar.
+In the $5^{th}$ phase of the internship. We started the assembly of the DAC V2.0 system and incorporating the above component changes and material changes as well. Then in the later stages of the sprint we conducted some leak testing on the various components to ensure the system is leak tight. The idea for the DAC V2.0 system to become more robust and run for much longer run times than before without stopping or refilling and making it a closed system. The system should also have a continuous $CO_2$ out-stream as well that can be fed to the Fluid Machinery subsystem to pump it out at 50 bar.
 
 \subsubsection{Redesigning the DAC V2.0 collector bucket}
 
